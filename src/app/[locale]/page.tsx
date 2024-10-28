@@ -10,6 +10,7 @@ import { FC } from 'react'
 
 const Home: FC = ({}) => {
   const t = useTranslations('home')
+
   return (
     <div className='flex size-full items-center justify-center gap-10'>
       <ModeToggle />
