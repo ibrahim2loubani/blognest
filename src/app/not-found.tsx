@@ -22,7 +22,7 @@ export default function NotFound(): JSX.Element {
           <Button
             size={'lg'}
             className='px-4 py-2'
-            onClick={() => router.push('/blogs')}
+            onClick={() => router.push('/')}
           >
             Go Back Home
           </Button>
