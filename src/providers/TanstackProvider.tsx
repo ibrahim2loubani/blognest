@@ -1,4 +1,5 @@
 'use client'
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar'
@@ -15,11 +16,10 @@ const TanStackProvider = ({
     <QueryClientProvider client={client}>
       {children}
       <ProgressBar
-        height='4px'
-        color='#262626'
+        height='3px'
+        color='#16A34A'
         options={{ showSpinner: false }}
         shallowRouting
-        // delay={300}
       />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
