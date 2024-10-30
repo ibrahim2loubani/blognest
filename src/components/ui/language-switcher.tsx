@@ -33,8 +33,8 @@ export function LanguageSwitcher() {
         <DropdownMenuItem onClick={() => setLocale('en')}>
           English
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLocale('fr')}>
-          French
+        <DropdownMenuItem onClick={() => setLocale('ar')}>
+          Arabic
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
