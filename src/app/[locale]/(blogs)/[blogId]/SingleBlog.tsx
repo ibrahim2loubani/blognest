@@ -3,13 +3,12 @@
 import { FC } from 'react'
 
 interface ISingleBlogProps {
-  params: {
-    blogId: string
-  }
+  id: string
 }
 
-const SingleBlog: FC<ISingleBlogProps> = ({ params }) => {
-  console.log('🚀 ~ params:', params)
+const SingleBlog: FC<ISingleBlogProps> = ({ id }) => {
+  console.log('🚀 ~ id:', id)
+
   return <div>SingleBlog</div>
 }
 
