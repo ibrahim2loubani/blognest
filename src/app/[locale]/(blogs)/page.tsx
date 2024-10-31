@@ -1,6 +1,30 @@
+import { getPosts } from '@/queries/blogs'
+import { cookies } from 'next/headers'
 import { FC } from 'react'
+import translate from 'translate'
 
-const Home: FC = async ({}) => {
+const Blogs: FC = async ({}) => {
+  const getBlogs = await getPosts()
+  const locale = (await cookies()).get('NEXT_LOCALE')?.value
+
+  const blogs = await Promise.all(
+    getBlogs.map(async (post: IPost) => {
+      const title = await translate(post.title, {
+        from: 'la',
+        to: locale,
+      })
+
+      const body = await translate(post.body, {
+        from: 'la',
+        to: locale,
+      })
+
+      return { ...post, title, body }
+    }),
+  )
+
+  console.log('Translated Blogs:', blogs)
+
   return (
     // <div className='flex size-full items-center justify-center gap-10'>
     //   <ModeToggle />
@@ -13,8 +37,8 @@ const Home: FC = async ({}) => {
     //     go to blogs
     //   </Link>
     // </div>
-    <section>hi</section>
+    <div>hi</div>
   )
 }
 
-export default Home
+export default Blogs
