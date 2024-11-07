@@ -2,6 +2,7 @@ import { getPosts } from '@/queries/blogs'
 import { cookies } from 'next/headers'
 import { FC } from 'react'
 import translate from 'translate'
+import BlogsPage from './BlogsPage'
 
 const Blogs: FC = async ({}) => {
   const getBlogs = await getPosts()
@@ -37,7 +38,9 @@ const Blogs: FC = async ({}) => {
     //     go to blogs
     //   </Link>
     // </div>
-    <div>hi</div>
+    <div className='py-10'>
+      <BlogsPage />
+    </div>
   )
 }
 
