@@ -15,6 +15,7 @@ interface ILocaleLayoutProps {
 
 const nunito = Nunito({
   weight: ['300', '400', '700', '800'],
+  subsets: ['latin'],
   style: ['normal'],
   display: 'swap',
   variable: '--font-nunito',
@@ -40,9 +41,7 @@ const LocaleLayout: React.FC<ILocaleLayoutProps> = async ({ children }) => {
             >
               <div className='relative flex h-full min-h-screen flex-col bg-background'>
                 <Navbar />
-                <main className='container mx-auto h-full px-8'>
-                  {children}
-                </main>
+                <main className='container mx-auto h-full p-8'>{children}</main>
               </div>
               <Toaster />
             </ThemeProvider>

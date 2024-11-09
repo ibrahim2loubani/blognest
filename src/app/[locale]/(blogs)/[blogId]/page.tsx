@@ -1,13 +1,13 @@
+import { FC } from 'react'
 import translate from 'translate'
 import SingleBlog from './SingleBlog'
 
-const BlogPage = async ({
-  params,
-}: {
-  params: {
-    blogId: string
-  }
-}) => {
+interface IBlogPageProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  params: any
+}
+
+const BlogPage: FC<IBlogPageProps> = async ({ params }) => {
   const { blogId } = await params
 
   const text = await translate(

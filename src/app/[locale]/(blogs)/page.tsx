@@ -9,7 +9,7 @@ const Blogs: FC = async ({}) => {
   const locale = (await cookies()).get('NEXT_LOCALE')?.value
 
   const blogs = await Promise.all(
-    getBlogs.map(async (post: IPost) => {
+    getBlogs.map(async (post: IBlogResponse) => {
       const title = await translate(post.title, {
         from: 'la',
         to: locale,
@@ -24,8 +24,6 @@ const Blogs: FC = async ({}) => {
     }),
   )
 
-  console.log('Translated Blogs:', blogs)
-
   return (
     // <div className='flex size-full items-center justify-center gap-10'>
     //   <ModeToggle />
@@ -39,7 +37,7 @@ const Blogs: FC = async ({}) => {
     //   </Link>
     // </div>
     <div className='py-10'>
-      <BlogsPage />
+      <BlogsPage blogs={blogs} locale={locale || 'en'} />
     </div>
   )
 }

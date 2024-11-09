@@ -9,7 +9,7 @@ interface ISingleBlogProps {
 const SingleBlog: FC<ISingleBlogProps> = ({ id }) => {
   console.log('🚀 ~ id:', id)
 
-  return <div>SingleBlog</div>
+  return <div className='py-10'>SingleBlog</div>
 }
 
 export default SingleBlog

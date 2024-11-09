@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+import { IconLanguage } from '@tabler/icons-react'
 import { useRouter } from 'next-nprogress-bar'
 import { usePathname } from 'next/navigation'
 
@@ -26,7 +27,7 @@ export function LanguageSwitcher() {
       <DropdownMenuTrigger asChild>
         <Button variant='outline' size='icon'>
           <span className='sr-only'>Toggle language</span>
-          lan
+          <IconLanguage className='size-5' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>

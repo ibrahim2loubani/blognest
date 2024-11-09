@@ -6,7 +6,10 @@ import { useRouter } from 'next/navigation'
 
 export default function NotFound(): JSX.Element {
   const router = useRouter()
-  const locale = document.cookie.match(/NEXT_LOCALE=(\w+)/)?.[1]
+  const locale =
+    typeof window !== 'undefined'
+      ? document?.cookie.match(/NEXT_LOCALE=(\w+)/)?.[1]
+      : 'en'
 
   return (
     <html lang={locale}>
