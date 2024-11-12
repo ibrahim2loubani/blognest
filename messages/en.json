@@ -16,26 +16,6 @@
     }
   },
   "mainPage": "Home",
-  "leaderboard": "LeaderBoard",
-  "businessExhibition": "Business Exhibition",
-  "courses": "Courses",
-  "careerPaths": "Career Paths",
-  "documentationOfSkills": "Documentation of Skills",
-  "certifications": "Certifications",
-  "careers": "Careers",
-  "accountUpgrade": "Account Upgrade",
-  "learn": "Learn",
-  "improve": "Improve",
-  "soon": "Coming Soon",
-  "logout": "Logout",
-  "discount": "Discount",
-  "title": "title",
-  "search": "search",
-  "theme": "theme",
-  "notifications": "notifications",
-  "thunder": "thunder",
-  "join now": "Join Now",
-  "invest in your future now": "Invest in your future",
-  "earn now": "Earn",
-  "discount for the yearly subscription": "Discount for the yearly subscription"
+  "english": "English",
+  "arabic": "Arabic"
 }
