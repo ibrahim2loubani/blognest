@@ -88,7 +88,8 @@ const BlogsPage: FC<IBlogsPageProps> = ({ blogs: blogsData }) => {
 
   useEffect(() => {
     if (entry?.isIntersecting) fetchNextPage()
-  }, [entry, fetchNextPage])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entry])
 
   return (
     <>
